@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collaborative Drawing App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="landingPage">
+    <button onclick="generateRoom()">Generate Room</button>
+    <button onclick="joinRoom()">Join Room</button>
+  </div>
+  <div id="roomCodeContainer" style="display: none">
+    <p>Your Room Code:</p>
+    <!-- Add the element with the id "roomCodeDisplay" here -->
+    <div id="roomCodeDisplay"></div>
+  </div>
+  <div id="joinRoomContainer" style="display: none">
+    <p>Enter Room Code:</p>
+    <input type="text" id="roomCodeInput" />
+    <button onclick="enterRoom()">Enter Room</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="drawingCanvas.js"></script>
+</body>
+</html>
